@@ -5,6 +5,7 @@
 #include<map>
 #include<cctype>
 #include<cstdlib>
+
 using namespace std;
 
 class Token
@@ -14,6 +15,7 @@ public:
 	int type;
 
 };
+
 
 int getPrecedence(string op)
 {
@@ -122,6 +124,7 @@ vector<Token> tokenize(const string& expr)
 
 	return tokens;
 }
+
 
 vector<Token> convertToPostfix(vector <Token>& tokens)
 {
@@ -326,6 +329,7 @@ int main()
 	}
 
 	double result = evalStack.top();
+
 
 	if (result == (long long)result)
 	{
